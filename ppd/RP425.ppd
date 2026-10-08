@@ -1,0 +1,226 @@
+*PPD-Adobe: "4.3"
+*FormatVersion: "4.3"
+*FileVersion: "1.0"
+*LanguageVersion: English
+*LanguageEncoding: ISOLatin1
+*PCFileName: "RP425.PPD"
+*Product: "(RP425)"
+*Manufacturer: "Rongta"
+*ModelName: "Rongta RP425 ZPL"
+*ShortNickName: "Rongta RP425 ZPL"
+*NickName: "Rongta RP425 ZPL Label Printer"
+*1284DeviceID: "MFG:;CMD:ZPL;MODEL:RP425(ZPL 203DPI);"
+*PSVersion: "(3010.000) 0"
+*LanguageLevel: "3"
+*ColorDevice: False
+*DefaultColorSpace: Gray
+*FileSystem: False
+*Throughput: "1"
+*LandscapeOrientation: Plus90
+*TTRasterizer: Type42
+*cupsVersion: 2.2
+*cupsModelNumber: 0
+*cupsManualCopies: True
+*cupsFilter2: "application/vnd.cups-raster application/vnd.zebra-zpl 0 /Library/Printers/RP425/Filter/rastertorp425"
+*cupsFilter2: "application/vnd.cups-raw application/vnd.zebra-zpl 0 -"
+*cupsColorProfile: none
+
+*OpenUI *ColorModel/Color Mode: PickOne
+*OrderDependency: 10 AnySetup *ColorModel
+*DefaultColorModel: Gray
+*ColorModel Gray/Grayscale: "<</cupsColorOrder 0/cupsColorSpace 0/cupsBitsPerColor 8>>setpagedevice"
+*CloseUI: *ColorModel
+
+*OpenUI *Resolution/Resolution: PickOne
+*OrderDependency: 10 AnySetup *Resolution
+*DefaultResolution: 203dpi
+*Resolution 203dpi/203 DPI: "<</HWResolution[203 203]>>setpagedevice"
+*CloseUI: *Resolution
+
+*OpenUI *PageSize/Label Size: PickOne
+*OrderDependency: 10 AnySetup *PageSize
+*DefaultPageSize: w288h432
+*PageSize w288h432/4 x 6 in: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageSize w288h576/4 x 8 in: "<</PageSize[288 576]/ImagingBBox null>>setpagedevice"
+*PageSize w288h288/4 x 4 in: "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageSize w288h216/4 x 3 in: "<</PageSize[288 216]/ImagingBBox null>>setpagedevice"
+*PageSize w288h144/4 x 2 in: "<</PageSize[288 144]/ImagingBBox null>>setpagedevice"
+*PageSize w288h72/4 x 1 in: "<</PageSize[288 72]/ImagingBBox null>>setpagedevice"
+*PageSize w216h144/3 x 2 in: "<</PageSize[216 144]/ImagingBBox null>>setpagedevice"
+*PageSize w216h72/3 x 1 in: "<</PageSize[216 72]/ImagingBBox null>>setpagedevice"
+*PageSize w162h90/2.25 x 1.25 in: "<</PageSize[162 90]/ImagingBBox null>>setpagedevice"
+*PageSize w144h72/2 x 1 in: "<</PageSize[144 72]/ImagingBBox null>>setpagedevice"
+*PageSize w108h72/1.5 x 1 in: "<</PageSize[108 72]/ImagingBBox null>>setpagedevice"
+*PageSize w283h425/100 x 150 mm: "<</PageSize[283.46 425.2]/ImagingBBox null>>setpagedevice"
+*PageSize w283h283/100 x 100 mm: "<</PageSize[283.46 283.46]/ImagingBBox null>>setpagedevice"
+*PageSize w170h85/60 x 30 mm: "<</PageSize[170.08 85.04]/ImagingBBox null>>setpagedevice"
+*PageSize w142h85/50 x 30 mm: "<</PageSize[141.73 85.04]/ImagingBBox null>>setpagedevice"
+*PageSize w113h71/40 x 25 mm: "<</PageSize[113.39 70.87]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageSize
+
+*OpenUI *PageRegion: PickOne
+*OrderDependency: 10 AnySetup *PageRegion
+*DefaultPageRegion: w288h432
+*PageRegion w288h432/4 x 6 in: "<</PageSize[288 432]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h576/4 x 8 in: "<</PageSize[288 576]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h288/4 x 4 in: "<</PageSize[288 288]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h216/4 x 3 in: "<</PageSize[288 216]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h144/4 x 2 in: "<</PageSize[288 144]/ImagingBBox null>>setpagedevice"
+*PageRegion w288h72/4 x 1 in: "<</PageSize[288 72]/ImagingBBox null>>setpagedevice"
+*PageRegion w216h144/3 x 2 in: "<</PageSize[216 144]/ImagingBBox null>>setpagedevice"
+*PageRegion w216h72/3 x 1 in: "<</PageSize[216 72]/ImagingBBox null>>setpagedevice"
+*PageRegion w162h90/2.25 x 1.25 in: "<</PageSize[162 90]/ImagingBBox null>>setpagedevice"
+*PageRegion w144h72/2 x 1 in: "<</PageSize[144 72]/ImagingBBox null>>setpagedevice"
+*PageRegion w108h72/1.5 x 1 in: "<</PageSize[108 72]/ImagingBBox null>>setpagedevice"
+*PageRegion w283h425/100 x 150 mm: "<</PageSize[283.46 425.2]/ImagingBBox null>>setpagedevice"
+*PageRegion w283h283/100 x 100 mm: "<</PageSize[283.46 283.46]/ImagingBBox null>>setpagedevice"
+*PageRegion w170h85/60 x 30 mm: "<</PageSize[170.08 85.04]/ImagingBBox null>>setpagedevice"
+*PageRegion w142h85/50 x 30 mm: "<</PageSize[141.73 85.04]/ImagingBBox null>>setpagedevice"
+*PageRegion w113h71/40 x 25 mm: "<</PageSize[113.39 70.87]/ImagingBBox null>>setpagedevice"
+*CloseUI: *PageRegion
+
+*DefaultImageableArea: w288h432
+*ImageableArea w288h432/4 x 6 in: "0 0 288 432"
+*ImageableArea w288h576/4 x 8 in: "0 0 288 576"
+*ImageableArea w288h288/4 x 4 in: "0 0 288 288"
+*ImageableArea w288h216/4 x 3 in: "0 0 288 216"
+*ImageableArea w288h144/4 x 2 in: "0 0 288 144"
+*ImageableArea w288h72/4 x 1 in: "0 0 288 72"
+*ImageableArea w216h144/3 x 2 in: "0 0 216 144"
+*ImageableArea w216h72/3 x 1 in: "0 0 216 72"
+*ImageableArea w162h90/2.25 x 1.25 in: "0 0 162 90"
+*ImageableArea w144h72/2 x 1 in: "0 0 144 72"
+*ImageableArea w108h72/1.5 x 1 in: "0 0 108 72"
+*ImageableArea w283h425/100 x 150 mm: "0 0 283.46 425.2"
+*ImageableArea w283h283/100 x 100 mm: "0 0 283.46 283.46"
+*ImageableArea w170h85/60 x 30 mm: "0 0 170.08 85.04"
+*ImageableArea w142h85/50 x 30 mm: "0 0 141.73 85.04"
+*ImageableArea w113h71/40 x 25 mm: "0 0 113.39 70.87"
+*DefaultPaperDimension: w288h432
+*PaperDimension w288h432/4 x 6 in: "288 432"
+*PaperDimension w288h576/4 x 8 in: "288 576"
+*PaperDimension w288h288/4 x 4 in: "288 288"
+*PaperDimension w288h216/4 x 3 in: "288 216"
+*PaperDimension w288h144/4 x 2 in: "288 144"
+*PaperDimension w288h72/4 x 1 in: "288 72"
+*PaperDimension w216h144/3 x 2 in: "216 144"
+*PaperDimension w216h72/3 x 1 in: "216 72"
+*PaperDimension w162h90/2.25 x 1.25 in: "162 90"
+*PaperDimension w144h72/2 x 1 in: "144 72"
+*PaperDimension w108h72/1.5 x 1 in: "108 72"
+*PaperDimension w283h425/100 x 150 mm: "283.46 425.2"
+*PaperDimension w283h283/100 x 100 mm: "283.46 283.46"
+*PaperDimension w170h85/60 x 30 mm: "170.08 85.04"
+*PaperDimension w142h85/50 x 30 mm: "141.73 85.04"
+*PaperDimension w113h71/40 x 25 mm: "113.39 70.87"
+
+*VariablePaperSize: True
+*MaxMediaWidth: "295"
+*MaxMediaHeight: "7200"
+*HWMargins: 0 0 0 0
+*CustomPageSize True: "pop pop pop <</PageSize[5 -2 roll]/ImagingBBox null>>setpagedevice"
+*ParamCustomPageSize Width: 1 points 36 295
+*ParamCustomPageSize Height: 2 points 36 7200
+*ParamCustomPageSize WidthOffset: 3 points 0 0
+*ParamCustomPageSize HeightOffset: 4 points 0 0
+*ParamCustomPageSize Orientation: 5 int 0 0
+
+*OpenUI *MediaTracking/Media Tracking: PickOne
+*OrderDependency: 20 AnySetup *MediaTracking
+*DefaultMediaTracking: Default
+*MediaTracking Default/Printer Setting: ""
+*MediaTracking Gap/Gap / Notch: ""
+*MediaTracking Mark/Black Mark: ""
+*MediaTracking Continuous/Continuous: ""
+*CloseUI: *MediaTracking
+
+*OpenUI *Darkness/Darkness: PickOne
+*OrderDependency: 20 AnySetup *Darkness
+*DefaultDarkness: Default
+*Darkness Default/Printer Setting: ""
+*Darkness 0/0 (lightest): ""
+*Darkness 2/2: ""
+*Darkness 4/4: ""
+*Darkness 6/6: ""
+*Darkness 8/8: ""
+*Darkness 10/10: ""
+*Darkness 12/12: ""
+*Darkness 14/14: ""
+*Darkness 16/16: ""
+*Darkness 18/18: ""
+*Darkness 20/20: ""
+*Darkness 22/22: ""
+*Darkness 24/24: ""
+*Darkness 26/26: ""
+*Darkness 28/28: ""
+*Darkness 30/30 (darkest): ""
+*CloseUI: *Darkness
+
+*OpenUI *PrintSpeed/Print Speed: PickOne
+*OrderDependency: 20 AnySetup *PrintSpeed
+*DefaultPrintSpeed: Default
+*PrintSpeed Default/Printer Setting: ""
+*PrintSpeed 2/2 in/s: ""
+*PrintSpeed 3/3 in/s: ""
+*PrintSpeed 4/4 in/s: ""
+*PrintSpeed 5/5 in/s: ""
+*PrintSpeed 6/6 in/s: ""
+*CloseUI: *PrintSpeed
+
+*OpenUI *Dither/Halftoning: PickOne
+*OrderDependency: 20 AnySetup *Dither
+*DefaultDither: Threshold
+*Dither Threshold/Sharp (text and barcodes): ""
+*Dither FloydSteinberg/Dithered (photos and logos): ""
+*CloseUI: *Dither
+
+*OpenUI *Threshold/Black Threshold: PickOne
+*OrderDependency: 20 AnySetup *Threshold
+*DefaultThreshold: 128
+*Threshold 64/Light: ""
+*Threshold 96/Medium Light: ""
+*Threshold 128/Normal: ""
+*Threshold 160/Medium Dark: ""
+*Threshold 192/Dark: ""
+*CloseUI: *Threshold
+
+*OpenUI *TopOffset/Vertical Offset: PickOne
+*OrderDependency: 20 AnySetup *TopOffset
+*DefaultTopOffset: 0
+*TopOffset -24/-3 mm: ""
+*TopOffset -16/-2 mm: ""
+*TopOffset -8/-1 mm: ""
+*TopOffset 0/0 mm: ""
+*TopOffset 8/+1 mm: ""
+*TopOffset 16/+2 mm: ""
+*TopOffset 24/+3 mm: ""
+*CloseUI: *TopOffset
+
+*OpenUI *LeftOffset/Horizontal Offset: PickOne
+*OrderDependency: 20 AnySetup *LeftOffset
+*DefaultLeftOffset: 0
+*LeftOffset -24/-3 mm: ""
+*LeftOffset -16/-2 mm: ""
+*LeftOffset -8/-1 mm: ""
+*LeftOffset 0/0 mm: ""
+*LeftOffset 8/+1 mm: ""
+*LeftOffset 16/+2 mm: ""
+*LeftOffset 24/+3 mm: ""
+*CloseUI: *LeftOffset
+
+*OpenUI *Rotate180/Rotate 180 Degrees: Boolean
+*OrderDependency: 20 AnySetup *Rotate180
+*DefaultRotate180: False
+*Rotate180 False/Off: ""
+*Rotate180 True/On: ""
+*CloseUI: *Rotate180
+
+*OpenUI *Compression/Data Compression: PickOne
+*OrderDependency: 20 AnySetup *Compression
+*DefaultCompression: ZPL
+*Compression ZPL/ZPL Run-Length: ""
+*Compression None/None: ""
+*CloseUI: *Compression
+
+*DefaultFont: Courier
+*Font Courier: Standard "(1.05)" Standard ROM
