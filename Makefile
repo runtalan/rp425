@@ -52,9 +52,6 @@ queue:
 ui:
 	python3 ui/rp425-ui.py
 
-ui:
-	python3 ui/server.py
-
 clean:
 	rm -rf build
 

@@ -55,18 +55,6 @@ Options (`lpoptions -p RP425 -l` lists them all):
 `Default` leaves the printer's own setting alone. ZPL settings such as `^MN` stay in
 effect until the printer is power-cycled.
 
-## Settings UI
-
-```sh
-make ui     # or: python3 ui/server.py [--queue RP425] [--port 8425]
-```
-
-Opens a local page (127.0.0.1 only) with every option from the queue's PPD: label size
-(including custom sizes), media tracking, darkness, speed, dither/threshold, offsets,
-rotation and compression. "Save as my defaults" writes them to `~/.cups/lpoptions`.
-The page also runs the `rp425` actions (calibrate, feed, config label, cancel) and can
-print a file with the values currently on screen. It needs only the system Python.
-
 ## The `rp425` tool
 
 ```sh
