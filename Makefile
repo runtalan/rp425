@@ -49,7 +49,13 @@ queue:
 	lpadmin -p RP425 -E -D "Rongta RP425" -v "$$uri" -P $(PPDDIR)/RP425.ppd.gz -o PageSize=w288h432 && \
 	echo "Added queue RP425 -> $$uri"
 
+ui:
+	python3 ui/rp425-ui.py
+
+ui:
+	python3 ui/server.py
+
 clean:
 	rm -rf build
 
-.PHONY: all test test-print install uninstall queue clean
+.PHONY: all test test-print install uninstall queue ui clean
