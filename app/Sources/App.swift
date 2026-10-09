@@ -16,8 +16,10 @@ struct EmberApp: App {
         let store = Store()
         await store.load()
         for (k, v) in overrides { store.values[k] = v }
+        // EMBER_SNAPSHOT_SIZE=WxH overrides the capture size (used for README screenshots).
+        let dims = (ProcessInfo.processInfo.environment["EMBER_SNAPSHOT_SIZE"] ?? "1060x800").split(separator: "x").compactMap { Double($0) }
         let host = NSHostingView(rootView: ContentView().environmentObject(store))
-        let win = NSWindow(contentRect: NSRect(x: 0, y: 0, width: 1060, height: 800), styleMask: [.borderless], backing: .buffered, defer: false)
+        let win = NSWindow(contentRect: NSRect(x: 0, y: 0, width: dims.first ?? 1060, height: dims.last ?? 800), styleMask: [.borderless], backing: .buffered, defer: false)
         win.contentView = host
         win.appearance = NSAppearance(named: .darkAqua)
         win.orderFrontRegardless()
