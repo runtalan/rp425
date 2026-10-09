@@ -52,7 +52,20 @@ queue:
 ui:
 	python3 ui/rp425-ui.py
 
+app:
+	sh ui/make-app.sh
+
+# Native SwiftUI settings app. `make native` builds build/Ember.app; `make install-native` copies it to ~/Applications.
+native: build/rp425
+	sh app/build.sh
+
+install-native: native
+	rm -rf "$$HOME/Applications/Ember.app"
+	mkdir -p "$$HOME/Applications"
+	cp -R build/Ember.app "$$HOME/Applications/Ember.app"
+	@echo "Installed ~/Applications/Ember.app"
+
 clean:
 	rm -rf build
 
-.PHONY: all test test-print install uninstall queue ui clean
+.PHONY: all test test-print install uninstall queue ui app native install-native clean

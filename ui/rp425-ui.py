@@ -204,6 +204,9 @@ class Handler(http.server.BaseHTTPRequestHandler):
                     return self.reply(400, {"error": f"{value!r} is not valid for {key}"})
                 rc, out = sh("lpoptions", "-p", self.printer, "-o", f"{key}={value}")
                 return self.reply(200 if rc == 0 else 500, {"ok": rc == 0, "message": out or f"{key} = {value}"})
+            if self.path == "/api/quit":
+                self.reply(200, {"ok": True, "message": "server stopped"})
+                return threading.Thread(target=self.server.shutdown).start()
             if self.path == "/api/reset":
                 rc, out = sh("lpoptions", "-x", self.printer)
                 return self.reply(200, {"ok": rc == 0, "message": out or "reset to queue defaults"})
@@ -254,7 +257,7 @@ pre{margin:0 0 12px;white-space:pre-wrap;font:12px ui-monospace,Menlo,monospace;
 #toast.show{opacity:1}#toast.bad{background:var(--err);color:#fff}
 </style></head><body><main>
 <header><div><h1>RP425 Settings</h1><div class="status"><span class="dot" id="dot"></span><span id="queue">…</span></div></div>
-<button id="reset" title="Remove your saved overrides and go back to the queue's defaults">Reset to defaults</button></header>
+<div style="display:flex;gap:8px"><button id="quit" title="Stop the settings server">Quit</button><button id="reset" title="Remove your saved overrides and go back to the queue's defaults">Reset to defaults</button></div></header>
 <div id="groups"></div>
 <section><h2>Printer</h2>
  <div class="actions">
@@ -336,6 +339,7 @@ $('#send').onclick=async()=>{
   try{const j=await api('/api/action/send',{zpl:$('#zpl').value});$('#out').textContent=j.message;toast(j.ok?'Sent':'Failed',!j.ok)}catch(e){toast(e.message,true)}};
 $('#reset').onclick=async()=>{if(!confirm('Discard your saved option overrides for this printer?'))return;
   const j=await api('/api/reset',{});toast(j.message,!j.ok);load()};
+$('#quit').onclick=async()=>{await api('/api/quit',{}).catch(()=>{});document.body.innerHTML='<p style="padding:40px;font:16px sans-serif">Settings server stopped. You can close this tab.</p>'};
 load().catch(e=>{$('#queue').textContent=e.message});
 </script></body></html>
 """

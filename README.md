@@ -84,6 +84,26 @@ It uses only the Python standard library and talks to the printer through CUPS, 
 printer actions that use USB directly (`feed`, `calibrate`, `config`, `info`) fail while
 a CUPS job is holding the printer.
 
+`make app` builds `~/Applications/RP425 Settings.app`: open it from Spotlight or drag it to the
+Dock and it starts the server (if needed) and opens the page. Use the page's **Quit** button
+to stop the server.
+
+## Ember (native app)
+
+```sh
+make install-native    # builds build/Ember.app and copies it to ~/Applications
+make native            # just build it
+```
+
+A SwiftUI app for macOS 13+ with every option from the PPD, including custom label sizes and the
+darkness/offset sliders, plus a live label preview that follows your settings (size, darkness, halftoning,
+offsets, rotation, media tracking). "Save as defaults" writes `~/.cups/lpoptions`, same as the web UI.
+It can also calibrate/feed/print the config label/flush the printer, print a test label with a
+millimetre ruler for tuning offsets, print a file (drop one on the preview), and send raw ZPL.
+The app carries its own copy of the PPD and `rp425`, so it runs from anywhere (including
+Finder/Spotlight when this repo is on an external volume). The USB actions still can't run while a CUPS
+job is holding the printer. `app/Sources/` has the code; `app/tools/makeicon.swift` draws the icon.
+
 ## Firmware quirks found while probing (V1.11)
 
 - `MFG` in the 1284 device ID is empty and the model is sent as `MODEL` rather than
