@@ -8,7 +8,7 @@ func text(_ s: String, _ size: CGFloat, _ x: CGFloat, _ y: CGFloat) {
   let line = CTLineCreateWithAttributedString(NSAttributedString(string: s, attributes: [.init(kCTFontAttributeName as String): font]))
   ctx.textPosition = CGPoint(x: x, y: y); CTLineDraw(line, ctx)
 }
-text("cinemoo", 40, 18, 380)
+text("RP425", 40, 18, 380)
 text("RP425 driver test - 4x6 in, 203 dpi", 12, 18, 355)
 for i in 0..<60 where i % 3 != 1 { ctx.fill(CGRect(x: 18 + CGFloat(i) * 4, y: 270, width: CGFloat(1 + i % 3), height: 70)) }
 let g = CGGradient(colorsSpace: CGColorSpaceCreateDeviceGray(), colors: [CGColor(gray: 1, alpha: 1), CGColor(gray: 0, alpha: 1)] as CFArray, locations: nil)!

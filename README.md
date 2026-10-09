@@ -201,3 +201,7 @@ docs/                   README images
   override settings for that render (e.g. `Dither=FloydSteinberg Rotate180=True`), and
   `EMBER_SNAPSHOT_SIZE=1060x940` sets the capture size. Run it with a throwaway `HOME` to be sure it
   never reads your real `~/.cups/lpoptions`.
+
+## License
+
+[MIT](LICENSE).
